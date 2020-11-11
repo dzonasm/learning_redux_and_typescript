@@ -1,12 +1,12 @@
 import { newItemType } from '../adds/adds.reducer'
 
 interface itemsListState {
-    item: 
+    cart: 
         {id: number, 
         title: string, 
         subtitle: string, 
         price:number, 
-        imgUrl: string}
+        imgUrl: string}[]
 }
 
 const INITIAL_STATE = {
@@ -15,11 +15,11 @@ const INITIAL_STATE = {
 
 type Action = {type : 'NEW_ITEM_ADDED', payload: newItemType}
 
-const shoppingCartReducer = (state = INITIAL_STATE , action : Action ) =>{
+const shoppingCartReducer = (state: itemsListState | null = INITIAL_STATE , action : Action ) =>{
     switch(action.type){
         case "NEW_ITEM_ADDED":
             return{
-                ...state, cart: [...state.cart, action.payload]
+                ...state, cart: [...state!.cart, action.payload]
             }
             default:
                 return state

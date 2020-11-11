@@ -1,8 +1,7 @@
 import React from 'react'
 import MenuItem from '../menu-item/menu-item'
 import { useSelector} from 'react-redux'
-import rootReducer from '../../redux/root-reducer/root-reducer'
-
+import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
 
 export default function MenuList() {
 
@@ -25,7 +24,7 @@ export default function MenuList() {
             imgUrl={item.imgUrl} 
             price={item.price}
             /> 
-            <button >Add to Cart</button> 
+            <AddToCartButton id={item.id}/> 
         </div>
     ))
 
