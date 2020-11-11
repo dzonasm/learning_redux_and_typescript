@@ -1,11 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import SearchBar from '../search-bar/search-bar'
 
 import './header.styles.css'
 
 const Header= () => {
     return(
         <div className="header">
+            <SearchBar/>
             <Link to='/'>
             <h2 className='header-title'> Garazo isparduotuve </h2>
             </Link>
