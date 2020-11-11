@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {itemsListState } from '../../redux/adds/adds.reducer'
 
@@ -16,11 +16,14 @@ const SearchBar = () => {
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchField(e.target.value)
-        console.log(items)
-        let newItems = items.filter(item => item.title.toLowerCase().includes(searchField.toLowerCase()))
-        console.log(newItems)
-        dispatch({type: "FILTER", payload: newItems })
+        console.log(searchField)
+        
     }
+
+    useEffect(() =>{
+        dispatch({type: "FILTER", payload: searchField})
+    },[searchField])
+
 
 
     return(

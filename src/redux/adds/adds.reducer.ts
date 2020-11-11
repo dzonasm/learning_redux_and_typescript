@@ -22,7 +22,7 @@ interface newItemType  {id: number,
     jeigu action.payload 35 eiluteje isimu is masyvo remu programa crashina
     */
 
-type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: newItemType | string}
+type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: any}
 
 const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
     switch(action.type) {
@@ -32,7 +32,10 @@ const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
             }
         case 'FILTER':
             return{
-                ...state, items: [action.payload]
+                ...itemsList, items: itemsList.filter(item => (
+                        item.title.toLowerCase().includes(action.payload.toLowerCase()) || 
+                        item.subtitle.toLowerCase().includes(action.payload.toLowerCase()))
+                    )
             }
             default:
                 return state
