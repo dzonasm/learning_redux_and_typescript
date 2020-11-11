@@ -1,0 +1,30 @@
+.img {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  grid-area: img;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.text {
+  grid-area: text;
+  align-items: left;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-container {
+  width: 75%;
+  display: grid;
+  height: 150px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "img text text text";
+  margin-bottom: 20px;
+}

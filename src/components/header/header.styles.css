@@ -1,0 +1,22 @@
+.header {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+}
+
+.header-title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+}
+
+.header-link {
+  color: white;
+}
