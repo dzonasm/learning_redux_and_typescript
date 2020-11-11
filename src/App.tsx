@@ -3,7 +3,7 @@ import './App.css';
 
 import {Switch , Route} from 'react-router-dom'
 
-import MenuList from './components/menu-list'
+import MenuList from './components/menu-list/menu-list'
 import Homepage from './components/homepage/homepage';
 import Header from './components/header/header'
 import NewAddPage from './components/new-add/new-add-page'

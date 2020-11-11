@@ -1,8 +1,8 @@
 import React from 'react'
-import MenuItem from './menu-item/menu-item'
+import MenuItem from '../menu-item/menu-item'
 import { useSelector} from 'react-redux'
 
-import {itemsListState} from '../redux/adds/adds.reducer'
+import {itemsListState} from '../../redux/adds/adds.reducer'
 
 export default function MenuList() {
 
@@ -20,7 +20,7 @@ export default function MenuList() {
     />))
 
     return (
-        <div>
+        <div className='menu-list-container'>
             <h1> Vo Skelbimai, m8</h1>
     <div>{content}</div>
         </div>

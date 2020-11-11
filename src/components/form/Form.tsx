@@ -30,10 +30,10 @@ const Form: React.FC = () => {
 
         <div className='form-container'>
             <form className= 'form'onSubmit={handleSubmit}>
-                <input type='text' placeholder='title' ref={title}></input>
-                <input type='text' placeholder='subtitle' ref={subtitle}></input>
-                <input type='text' placeholder='price' ref={price}></input>
-                <input type='text' placeholder='image URL' ref={imgUrl}></input>
+                <input type='text' placeholder='title' ref={title} required={true}></input>
+                <input type='text' placeholder='subtitle' ref={subtitle} required={true}></input>
+                <input type='text' placeholder='price' ref={price} required={true}></input>
+                <input type='text' placeholder='image URL' ref={imgUrl} required={true}></input>
                 <button type='submit'>Prideti skelbima</button>
             </form>
         </div>

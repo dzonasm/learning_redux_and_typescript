@@ -18,9 +18,11 @@ interface newItemType  {id: number,
     price:number, 
     imgUrl: string}
 
-    // pridedant type [] prie action types ismeta error kuris crashina programa, noriu, kad action.payload butu naujas masyvas, per kuri mappina programa ir rodo tik filtruotus skelbimus. beda tame, kad mano action.payload yra masyvas masyve, todel rasant i search-bar programa crashina, nes funkcija .toLowerCase neveikia su undefined
+    /* pridedant type [] prie action types ismeta error kuris crashina programa, noriu, kad action.payload butu naujas masyvas, per kuri mappina programa ir rodo tik filtruotus skelbimus. beda tame, kad mano action.payload yra masyvas masyve, todel rasant i search-bar programa crashina, nes funkcija .toLowerCase neveikia su undefined.
+    jeigu action.payload 35 eiluteje isimu is masyvo remu programa crashina
+    */
 
-type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: newItemType}
+type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: newItemType | string}
 
 const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
     switch(action.type) {
