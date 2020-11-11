@@ -18,7 +18,9 @@ interface newItemType  {id: number,
     price:number, 
     imgUrl: string}
 
-type Action = {type : "ADD_NEW_ITEM" | 'FILTER_BY_NAME', payload: newItemType}
+    // pridedant type [] prie action types ismeta error kuris crashina programa, noriu, kad action.payload butu naujas masyvas, per kuri mappina programa ir rodo tik filtruotus skelbimus. beda tame, kad mano action.payload yra masyvas masyve, todel rasant i search-bar programa crashina, nes funkcija .toLowerCase neveikia su undefined
+
+type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: newItemType}
 
 const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
     switch(action.type) {
@@ -26,9 +28,9 @@ const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
             return {
                 ...state, items:[ action.payload, ...state.items]
             }
-        case 'FILTER_BY_NAME':
+        case 'FILTER':
             return{
-                ...state, items:[action.payload]
+                ...state, items: [action.payload]
             }
             default:
                 return state

@@ -1,29 +1,33 @@
-import React, {ChangeEvent} from 'react'
+import React, {ChangeEvent, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {itemsListState } from '../../redux/adds/adds.reducer'
 
+import './search-bar.styles.css'
+
 
 const SearchBar = () => {
+
+    const [searchField, setSearchField] = useState('')
     const dispatch = useDispatch()
     const items = useSelector<itemsListState, itemsListState['items']>((state) => state.items)
 
+    //tikslas filtruoti items masyva pagal title ir subtitile naudojant .filter() metoda
+    //po to butu filtravimo metodas pagal kainas
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-            const textFieldValue = e.target.value
-            let filteredArray
-            if (textFieldValue){
-                    filteredArray = items.filter(
-                    item=>
-                    item.title.toLowerCase()
-                    .includes(textFieldValue.toLowerCase()))
-                    dispatch({type: "FILTER_BY_NAME", payload: filteredArray})
-                    console.log(items)
-                } else return
+        setSearchField(e.target.value)
+        console.log(items)
+        let newItems = items.filter(item => item.title.toLowerCase().includes(searchField.toLowerCase()))
+        console.log(newItems)
+        dispatch({type: "FILTER", payload: newItems })
     }
 
 
     return(
         <div className='search-bar-container'>
-            <input type="text"  onChange={handleChange}/>
+            <input type="text"  onChange={handleChange} value={searchField} className='search-bar'
+            placeholder="ieskoti garaze"
+            />
 
         </div>
     )

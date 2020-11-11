@@ -1,6 +1,6 @@
 import React from 'react'
 import MenuItem from './menu-item/menu-item'
-import {useDispatch, useSelector} from 'react-redux'
+import { useSelector} from 'react-redux'
 
 import {itemsListState} from '../redux/adds/adds.reducer'
 
