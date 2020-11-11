@@ -1,6 +1,5 @@
 import React, {ChangeEvent, useState, useEffect} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
-import {itemsListState } from '../../redux/adds/adds.reducer'
+import {useDispatch} from 'react-redux'
 
 import './search-bar.styles.css'
 
@@ -9,7 +8,6 @@ const SearchBar = () => {
 
     const [searchField, setSearchField] = useState('')
     const dispatch = useDispatch()
-    const items = useSelector<itemsListState, itemsListState['items']>((state) => state.items)
 
     //tikslas filtruoti items masyva pagal title ir subtitile naudojant .filter() metoda
     //po to butu filtravimo metodas pagal kainas

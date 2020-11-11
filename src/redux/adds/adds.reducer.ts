@@ -12,7 +12,7 @@ const INITIAL_STATE = {
     items: itemsList
 }
 
-interface newItemType  {id: number, 
+export interface newItemType  {id: number, 
     title: string, 
     subtitle: string, 
     price:number, 

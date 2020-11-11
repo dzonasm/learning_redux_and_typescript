@@ -1,23 +1,33 @@
 import React from 'react'
 import MenuItem from '../menu-item/menu-item'
 import { useSelector} from 'react-redux'
+import rootReducer from '../../redux/root-reducer/root-reducer'
 
-import {itemsListState} from '../../redux/adds/adds.reducer'
 
 export default function MenuList() {
 
-    const items = useSelector<itemsListState, itemsListState['items']>((state) => state.items)
+    const state = useSelector((state: {
+        items: {
+            items: any[];
+        };
+        shoppingCart: never;
+    }) => state.items)
     
+    console.log(state.items)
     //sutvarkyti destructuring
 
-    const content = items.map(item => (
-    <MenuItem 
-    key={item.id} 
-    title={item.title} 
-    subtitle={item.subtitle} 
-    imgUrl={item.imgUrl} 
-    price={item.price}  
-    />))
+    const content = state.items.map(item => (
+        <div>
+            <MenuItem 
+            key={item.id} 
+            title={item.title} 
+            subtitle={item.subtitle} 
+            imgUrl={item.imgUrl} 
+            price={item.price}
+            /> 
+            <button >Add to Cart</button> 
+        </div>
+    ))
 
     return (
         <div className='menu-list-container'>
