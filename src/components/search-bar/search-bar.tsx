@@ -10,7 +10,6 @@ const SearchBar = () => {
     const [searchField, setSearchField] = useState('')
     const dispatch = useDispatch()
 
-    //po to butu filtravimo metodas pagal kainas
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchField(e.target.value)

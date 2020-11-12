@@ -20,3 +20,8 @@
 .header-link {
   color: white;
 }
+
+.widget-and-cart-components {
+  display: flex;
+  flex-direction: column;
+}

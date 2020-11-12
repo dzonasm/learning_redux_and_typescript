@@ -6,7 +6,7 @@ import WidgetItem from './widget-items/widget-items'
 
 import './shopping-cart-widget.styles.css'
 
-function ShoppingCart() {
+function CartWidget() {
 
     const selectCartState = (state : RootState) => state.shoppingCart.items
     const cartState = useSelector(selectCartState)
@@ -32,4 +32,4 @@ function ShoppingCart() {
         )
     }
 
-    export default  ShoppingCart;
+    export default  CartWidget;
