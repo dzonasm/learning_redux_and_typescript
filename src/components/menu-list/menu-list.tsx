@@ -24,7 +24,7 @@ export default function MenuList() {
             imgUrl={item.imgUrl} 
             price={item.price}
             /> 
-            <AddToCartButton id={item.id}/> 
+            <AddToCartButton item={item}/> 
         </div>
     ))
 

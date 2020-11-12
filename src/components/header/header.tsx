@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import SearchBar from '../search-bar/search-bar'
-import {ReactComponent as MagnifyingGlass } from '../../resources/glass.svg'
+//import {ReactComponent as MagnifyingGlass } from '../../resources/glass.svg'
 
 import './header.styles.css'
 
@@ -18,6 +18,9 @@ const Header= () => {
                 </Link>
                 <Link to='/ikelti'>
                 <p className='header-link'>Ikelti skelbima</p>
+                </Link>
+                <Link to='/cart'>
+                <p className='header-link'>Shopping cart</p>
                 </Link>
             </div>
         </div>

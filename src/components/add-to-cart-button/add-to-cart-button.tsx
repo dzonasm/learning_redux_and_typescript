@@ -1,34 +1,25 @@
 import React from 'react'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 
 import './add-to-cart-button.styles.css'
 
 interface Props {
-    id: number
+    item : {
+        id: number,
+        title : string,
+        subtitle : string,
+        price : number,
+        imgUrl: string
+    }
 }
 
-const AddToCartButton: React.FC<Props> = ({id})=>{
+const AddToCartButton: React.FC<Props> = ({item})=>{
     const dispatch = useDispatch()
-
-
-    const state = useSelector((state: {
-        items: {
-            items: any[];
-        };
-        shoppingCart: any;
-    }) => state.shoppingCart)
-    
-    console.log(state)
 
     
     const handleClick = ()=>{
-        console.log(id)
-        const newItem= ()=>{
-            return(
-                null
-            )
-        }
-        dispatch({type:"NEW_ITEM_ADDED", payload: newItem })
+        console.log(item.id)
+        dispatch({type:"NEW_ITEM_ADDED", payload: item })
     }
 
     return(

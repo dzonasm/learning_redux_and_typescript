@@ -7,7 +7,7 @@ type ShoppingCartItemProps ={
     price: number
 }
 
-const SoppingCartItemItem = ({title, imgUrl, subtitle, price}: ShoppingCartItemProps)=> {
+const ShoppingCartItemItem = ({title, imgUrl, subtitle, price}: ShoppingCartItemProps)=> {
     return(
         <div className="add-container">
             <div 
@@ -24,4 +24,4 @@ const SoppingCartItemItem = ({title, imgUrl, subtitle, price}: ShoppingCartItemP
     )
 }
 
-export default SoppingCartItemItem
+export default ShoppingCartItemItem

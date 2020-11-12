@@ -1,32 +1,22 @@
 import React from 'react'
-import { useSelector} from 'react-redux'
-import ShoppingCartItem from '../shopping-cart-items/shopping-cart-items.componetn'
-
-import {itemsListState} from '../../redux/adds/adds.reducer'
+import {useSelector} from 'react-redux'
+import {RootState} from '../../redux/root-reducer/root-reducer'
+import {emptyCart, itemsListState} from '../../redux/shopping-cart/shopping-cart.reducer'
 
 export default function ShoppingCart() {
 
-    const shoppingCartItems = useSelector<itemsListState, itemsListState['items']>((state) => state.items)
+    const cartState: any= useSelector<RootState>(state => state.shoppingCart?.cart)
+    console.log(cartState)
+
+    const cart : emptyCart | itemsListState =cartState
+
     
-    //sutvarkyti destructuring
 
-    const content = shoppingCartItems.map(item => (
-        <div>
-            <ShoppingCartItem
-            key={item.id} 
-            title={item.title} 
-            subtitle={item.subtitle} 
-            imgUrl={item.imgUrl} 
-            price={item.price}
-            /> 
-            <button >Add to Cart</button> 
-        </div>
-    ))
 
-    return (
-        <div className='shopping-cart-container'>
-            <h1> Tavo vezimelis, seni</h1>
-    <div>{content}</div>
-        </div>
-    )
+return(
+    <div>
+<h2>The Cart</h2>
+
+    </div>
+)
 }

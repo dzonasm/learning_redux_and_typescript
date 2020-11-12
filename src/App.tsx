@@ -7,6 +7,7 @@ import MenuList from './components/menu-list/menu-list'
 import Homepage from './components/homepage/homepage';
 import Header from './components/header/header'
 import NewAddPage from './components/new-add/new-add-page'
+import ShoppingCartPage from './pages/shopping-cart-page'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/' component={Homepage}/>
       <Route path='/skelbimai' component={MenuList} />
       <Route path='/ikelti' component={NewAddPage}/>
+      <Route path='/cart' component={ShoppingCartPage}/>
       </Switch>
     </div>
   );
