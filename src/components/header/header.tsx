@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import SearchBar from '../search-bar/search-bar'
 //import {ReactComponent as MagnifyingGlass } from '../../resources/glass.svg'
+import CartWidget from '../shopping-cart-widget/shopping-cart-widget'
 
 import './header.styles.css'
 
@@ -11,7 +11,6 @@ const Header= () => {
             <Link to='/'>
             <h2 className='header-title'> Garazo isparduotuve </h2>
             </Link>
-            <SearchBar/>
             <div className='links'>
                 <Link to='/skelbimai'>
                 <p className='header-link'>Skelbimai</p>
@@ -23,6 +22,7 @@ const Header= () => {
                 <p className='header-link'>Shopping cart</p>
                 </Link>
             </div>
+            <CartWidget/>
         </div>
     )
 }

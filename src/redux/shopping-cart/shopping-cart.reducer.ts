@@ -1,4 +1,4 @@
-import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED} from '../types/types'
+import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED, ITEM_REMOVED} from '../types/types'
 
 export interface emptyCart {
     items: []
@@ -17,8 +17,15 @@ const shoppingCartReducer = (
             return{
                 ...state, items: [...state!.items, action.payload]
             }
-            default:
-                return state
+        case ITEM_REMOVED:
+            return{
+                ...state, items: state.items.filter(item =>{
+                    return(item !== action.payload)
+                })
+            }
+
+        default:
+            return state
         }
 }
 

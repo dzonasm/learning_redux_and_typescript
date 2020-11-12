@@ -1,0 +1,8 @@
+.shopping-cart-widget {
+  height: 320px;
+  width: 180px;
+  overflow: scroll;
+  position: absolute;
+  left: 80%;
+  top: 70%;
+}

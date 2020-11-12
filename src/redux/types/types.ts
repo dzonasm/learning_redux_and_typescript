@@ -8,6 +8,14 @@ export interface shopItem{
     imgUrl: string
     } 
 
+//menu item props for components, that dont require the id to be passed
+export interface shopItemWithoutId{
+    title: string, 
+    subtitle: string, 
+    price:number, 
+    imgUrl: string
+    } 
+
 
 //newItemType
 export interface shopItemArray{
@@ -18,13 +26,14 @@ export interface shopItemArray{
 export const NEW_ITEM_ADDED = 'NEW_ITEM_ADDED'
 export const ADD_NEW_ITEM = 'ADD_NEW_ITEM'
 export const FILTER = 'FILTER'
+export const ITEM_REMOVED = 'ITEM_REMOVED'
 
 
 // action type in shopping cart
-export type shoppingCartAction = {type : typeof NEW_ITEM_ADDED, payload: shopItem}
+export type shoppingCartAction = {type : typeof NEW_ITEM_ADDED | typeof ITEM_REMOVED, payload: shopItem}
 
 //action type for the adds reducer
-export type addsReducerAction = {type : typeof ADD_NEW_ITEM | 'FILTER', payload: any}
+export type addsReducerAction = {type : typeof ADD_NEW_ITEM | typeof FILTER, payload: any}
 
 
 
