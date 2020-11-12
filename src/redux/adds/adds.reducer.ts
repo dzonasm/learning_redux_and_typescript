@@ -1,44 +1,29 @@
 import itemsList from '../../resources/itemsList'
-
-export interface itemsListState {
-    items: {id: number, 
-        title: string, 
-        subtitle: string, 
-        price:number, 
-        imgUrl: string}[]
-}
+import {shopItemArray, addsReducerAction, ADD_NEW_ITEM, FILTER} from '../types/types'
 
 const INITIAL_STATE = {
     items: itemsList
 }
 
-export interface newItemType  {id: number, 
-    title: string, 
-    subtitle: string, 
-    price:number, 
-    imgUrl: string}
 
-    /* pridedant type [] prie action types ismeta error kuris crashina programa, noriu, kad action.payload butu naujas masyvas, per kuri mappina programa ir rodo tik filtruotus skelbimus. beda tame, kad mano action.payload yra masyvas masyve, todel rasant i search-bar programa crashina, nes funkcija .toLowerCase neveikia su undefined.
-    jeigu action.payload 35 eiluteje isimu is masyvo remu programa crashina
-    */
+const addsReducer = (
+    state: shopItemArray = INITIAL_STATE, 
+    action: addsReducerAction) =>{
 
-type Action = {type : "ADD_NEW_ITEM" | 'FILTER', payload: any}
-
-const addsReducer = (state: itemsListState = INITIAL_STATE, action: Action) =>{
     switch(action.type) {
-        case 'ADD_NEW_ITEM':
+        case ADD_NEW_ITEM:
             return {
                 ...state, items:[ action.payload, ...state.items]
             }
-        case 'FILTER':
+
+        case FILTER:
             return{
-                ...itemsList, items: itemsList.filter(item => (
+                ...state, items: itemsList.filter(item => (
                         item.title.toLowerCase().includes(action.payload.toLowerCase()) || 
-                        item.subtitle.toLowerCase().includes(action.payload.toLowerCase()))
-                    )
+                        item.subtitle.toLowerCase().includes(action.payload.toLowerCase())))
             }
-            default:
-                return state
+        default:
+            return state
     }
 }
 

@@ -1,5 +1,6 @@
 import React, {ChangeEvent, useState, useEffect} from 'react'
 import {useDispatch} from 'react-redux'
+import {FILTER} from '../../redux/types/types'
 
 import './search-bar.styles.css'
 
@@ -9,7 +10,6 @@ const SearchBar = () => {
     const [searchField, setSearchField] = useState('')
     const dispatch = useDispatch()
 
-    //tikslas filtruoti items masyva pagal title ir subtitile naudojant .filter() metoda
     //po to butu filtravimo metodas pagal kainas
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -19,10 +19,8 @@ const SearchBar = () => {
     }
 
     useEffect(() =>{
-        dispatch({type: "FILTER", payload: searchField})
+        dispatch({type: FILTER, payload: searchField})
     },[searchField, dispatch])
-
-
 
     return(
         <div className='search-bar-container'>

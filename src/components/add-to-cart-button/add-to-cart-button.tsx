@@ -1,16 +1,11 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
+import {shopItem, NEW_ITEM_ADDED} from '../../redux/types/types'
 
 import './add-to-cart-button.styles.css'
 
 interface Props {
-    item : {
-        id: number,
-        title : string,
-        subtitle : string,
-        price : number,
-        imgUrl: string
-    }
+    item : shopItem
 }
 
 const AddToCartButton: React.FC<Props> = ({item})=>{
@@ -19,7 +14,7 @@ const AddToCartButton: React.FC<Props> = ({item})=>{
     
     const handleClick = ()=>{
         console.log(item.id)
-        dispatch({type:"NEW_ITEM_ADDED", payload: item })
+        dispatch({type: NEW_ITEM_ADDED, payload: item })
     }
 
     return(

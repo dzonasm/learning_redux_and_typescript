@@ -1,5 +1,6 @@
 import React, {useRef} from 'react'
 import {useDispatch } from 'react-redux'
+import {ADD_NEW_ITEM} from '../../redux/types/types'
 
 import './form.styles.css'
 
@@ -16,7 +17,7 @@ const Form: React.FC = () => {
     
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) : void => {
         e.preventDefault()
-        dispatch({type: 'ADD_NEW_ITEM', payload: {
+        dispatch({type: ADD_NEW_ITEM , payload: {
             id: id,
             title: title.current?.value,
             subtitle: subtitle.current?.value,
@@ -26,7 +27,6 @@ const Form: React.FC = () => {
     }
     
     return(
-
 
         <div className='form-container'>
             <form className= 'form'onSubmit={handleSubmit}>

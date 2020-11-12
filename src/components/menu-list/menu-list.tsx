@@ -7,18 +7,19 @@ export default function MenuList() {
 
     const state = useSelector((state: {
         items: {
-            items: any[];
+            items: {id: number, 
+                title: string, 
+                subtitle: string, 
+                price:number, 
+                imgUrl: string}[];
         };
-        shoppingCart: never;
+        shoppingCart: [];
     }) => state.items)
     
-    console.log(state.items)
-    //sutvarkyti destructuring
 
     const content = state.items.map(item => (
-        <div>
-            <MenuItem 
-            key={item.id} 
+        <div key={item.id}>
+            <MenuItem  
             title={item.title} 
             subtitle={item.subtitle} 
             imgUrl={item.imgUrl} 

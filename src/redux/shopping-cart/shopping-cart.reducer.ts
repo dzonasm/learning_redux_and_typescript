@@ -1,34 +1,25 @@
-import { newItemType } from '../adds/adds.reducer'
-
-export interface itemsListState {
-    cart: 
-        {id: number, 
-        title: string, 
-        subtitle: string, 
-        price:number, 
-        imgUrl: string}[]
-}
+import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED} from '../types/types'
 
 export interface emptyCart {
-    cart: []
+    items: []
 }
 
 const INITIAL_STATE = {
-    cart : []
+    items : []
 }
 
-type Action = {type : 'NEW_ITEM_ADDED', payload: newItemType}
-
-const shoppingCartReducer = (state: itemsListState | emptyCart = INITIAL_STATE , action : Action ) =>{
+const shoppingCartReducer = (
+    state: shopItemArray | emptyCart = INITIAL_STATE, 
+    action : shoppingCartAction ) =>{
+        
     switch(action.type){
-        case "NEW_ITEM_ADDED":
+        case NEW_ITEM_ADDED:
             return{
-                ...state, cart: [...state!.cart, action.payload]
+                ...state, items: [...state!.items, action.payload]
             }
             default:
                 return state
         }
-
 }
 
 export default shoppingCartReducer;
