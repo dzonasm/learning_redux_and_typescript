@@ -1,9 +1,9 @@
 import React from 'react'
-import {shopItemWithoutId} from '../../../redux/types/types'
+import {shopItem} from '../../../redux/types/types'
 
 import './widget-items-styles.css'
 
-const WidgetItem = ({ title, price, imgUrl} : shopItemWithoutId) =>{
+const WidgetItem = ({ title, price, imgUrl} : shopItem) =>{
     return(
         <div className="cart-item">
             <div 

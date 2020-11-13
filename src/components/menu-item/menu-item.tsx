@@ -1,9 +1,9 @@
 import React from 'react'
 import './menu-item.styles.css'
-import {shopItemWithoutId} from '../../redux/types/types'
+import {shopItem} from '../../redux/types/types'
 
 
-const MenuItem = ({title, imgUrl, subtitle, price}: shopItemWithoutId)=> {
+const MenuItem = ({title, imgUrl, subtitle, price, id}: shopItem)=> {
     return(
         <div className="add-container">
             <div 
@@ -16,6 +16,7 @@ const MenuItem = ({title, imgUrl, subtitle, price}: shopItemWithoutId)=> {
     <p className='subtitle'>{subtitle}</p>
     <p className='price'>{price} $</p>
             </div>
+
         </div>
     )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {shopItem, ITEM_REMOVED} from '../../redux/types/types'
+import {ITEM_REMOVED} from '../../redux/types/types'
 
 import './remove-button-styles.css'
 
 
 interface Props {
-    item : shopItem
+    item : string | undefined
     buttonText: string
 }
 
@@ -15,7 +15,6 @@ const RemoveFromCartButton: React.FC<Props> = ({item, buttonText})=>{
 
     
     const handleClick = ()=>{
-        console.log(item.id)
         dispatch({type: ITEM_REMOVED, payload: item })
     }
 

@@ -20,7 +20,7 @@ const shoppingCartReducer = (
         case ITEM_REMOVED:
             return{
                 ...state, items: state.items.filter(item =>{
-                    return(item !== action.payload)
+                    return(item.id !== action.payload)
                 })
             }
 
