@@ -19,7 +19,7 @@ const AddToCartButton: React.FC<Props> = ({item, buttonText})=>{
     }
 
     return(
-    <button onClick={handleClick}>{buttonText.toUpperCase()}</button>
+    <button className='add-to-cart-button' onClick={handleClick}>{buttonText.toUpperCase()}</button>
     )
 }
 

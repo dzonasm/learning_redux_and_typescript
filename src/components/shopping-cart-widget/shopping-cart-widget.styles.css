@@ -1,10 +1,34 @@
 .shopping-cart-widget {
-  height: 320px;
+  height: 340px;
   width: 180px;
-  overflow: scroll;
   background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translateX(-75%);
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
-::-webkit-scrollbar {
+.cart-items {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.shopping-cart-widget ::-webkit-scrollbar {
   display: none;
+}
+
+.cart-item-and-button {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-empty-text {
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
+  display: block;
+  text-align: center;
+  margin-top: 25px;
 }

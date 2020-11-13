@@ -4,7 +4,7 @@ import {TOGGLE_CART_WIDGET_VISIBLE} from '../../../redux/types/types'
 import {ReactComponent as Logo} from '../../../resources/shopping_cart_logo.svg'
 
 import './widget-button.styles.css'
- 
+
 
 const WidgetButton = ()=> {
 
@@ -16,7 +16,7 @@ const WidgetButton = ()=> {
 
     return (
         <div className='widget-toggle' onClick = {handleClick}>
-            <Logo/>
+            <Logo className='cart-logo'/>
         </div>
     )
 }

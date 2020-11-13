@@ -2,6 +2,8 @@ import React from 'react'
 import {useDispatch} from 'react-redux'
 import {shopItem, ITEM_REMOVED} from '../../redux/types/types'
 
+import './remove-button-styles.css'
+
 
 interface Props {
     item : shopItem
@@ -18,7 +20,7 @@ const RemoveFromCartButton: React.FC<Props> = ({item, buttonText})=>{
     }
 
     return(
-    <button onClick={handleClick}>{buttonText.toUpperCase()}</button>
+    <button className='remove-button' onClick={handleClick}>{buttonText.toUpperCase()}</button>
     )
 }
 

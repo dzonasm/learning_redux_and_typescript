@@ -1,3 +1,17 @@
-.menu-list-container {
-  width: 80%;
+.skelbimai-header {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.search-bar-container {
+  display: block;
+  text-align: center;
+}
+
+.add-button-container {
+  position: relative;
+  bottom: 30px;
+  left: 55px;
 }

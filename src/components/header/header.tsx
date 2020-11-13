@@ -15,25 +15,24 @@ const Header= () => {
     return(
         <div className="header">
             <Link to='/'>
-            <h2 className='header-title'> Garazo isparduotuve </h2>
+            <h2 className='header-title'> Garaged </h2>
             </Link>
             <div className='links'>
                 <Link to='/skelbimai'>
                 <p className='header-link'>Skelbimai</p>
                 </Link>
                 <Link to='/ikelti'>
-                <p className='header-link'>Ikelti skelbima</p>
+                <p className='header-link'>Ikelti</p>
                 </Link>
                 <Link to='/cart'>
-                <p className='header-link'>Shopping cart</p>
+                <p className='header-link'>Cart</p>
                 </Link>
+                <WidgetButton/>
             </div>
             <div className='widget-and-cart-components'>
             {
                 widgetState.showCart? <CartWidget/>  : null
             }
-            <WidgetButton/>
-            
             </div>
         </div>
     )

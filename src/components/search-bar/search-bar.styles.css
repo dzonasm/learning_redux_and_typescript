@@ -1,5 +1,9 @@
 .search-bar-container {
+  margin-bottom: 40px;
 }
 
 .search-bar {
+  border-left: none;
+  border-top: none;
+  border-right: none;
 }
