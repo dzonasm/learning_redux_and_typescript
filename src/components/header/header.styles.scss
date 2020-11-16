@@ -27,10 +27,16 @@
 }
 
 .links {
-  width: 20vw;
+  width: 25vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
   margin: auto 0 auto auto;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    width: 60%;
+  }
 }

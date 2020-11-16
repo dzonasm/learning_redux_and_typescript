@@ -5,7 +5,7 @@ import CartWidget from '../shopping-cart-widget/shopping-cart-widget'
 import WidgetButton from '../shopping-cart-widget/widget-button/widget-button'
 import {RootState} from '../../redux/root-reducer/root-reducer'
 
-import './header.styles.css'
+import './header.styles.scss'
 
 const Header= () => {
 
@@ -18,14 +18,14 @@ const Header= () => {
             <h2 className='header-title'> Garaged </h2>
             </Link>
             <div className='links'>
-                <Link to='/skelbimai'>
+                <Link to='/'>
                 <p className='header-link'>Skelbimai</p>
                 </Link>
                 <Link to='/ikelti'>
                 <p className='header-link'>Ikelti</p>
                 </Link>
                 <Link to='/cart'>
-                <p className='header-link'>Cart</p>
+                <p className='header-link'>Krepselis</p>
                 </Link>
                 <WidgetButton/>
             </div>

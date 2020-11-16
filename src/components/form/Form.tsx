@@ -6,7 +6,6 @@ import './form.styles.css'
 
 const Form: React.FC = () => {
 
-
     const title = useRef<HTMLInputElement>(null)
     const subtitle = useRef<HTMLInputElement>(null)
     const price = useRef<HTMLInputElement>(null)
@@ -30,14 +29,47 @@ const Form: React.FC = () => {
 
         <div className='form-container'>
             <form className= 'form'onSubmit={handleSubmit}>
-                <input type='text' placeholder='title' ref={title} required={true}></input>
-                <input type='text' placeholder='subtitle' ref={subtitle} required={true}></input>
-                <input type='text' placeholder='price' ref={price} required={true}></input>
-                <input type='text' placeholder='image URL' ref={imgUrl} required={true}></input>
-                <button type='submit'>Prideti skelbima</button>
+                <label className='label'>Pavadinimas</label>
+                <div className='form-input'>
+                <input type='text' ref={title} required={true}>
+                </input>
+                <label className='input-label'>
+                </label>
+                </div>
+                <label className='label'>Aprasymas</label>
+                <div className='form-input'>
+                <input type='text' ref={subtitle} required={true}>
+                </input>
+                <label className='input-label'>
+                </label>
+                </div>
+                <br/>
+                <label className='label'>Kaina $</label>
+                <div className='form-input'>
+                <input type='text' ref={price} required={true}>
+                </input>
+                <label className='input-label'>
+                </label>
+                </div>
+                <label className='label'>Atvaizdo nuoroda</label>
+                <div className='form-input'>
+                <input type='text' ref={imgUrl} required={true}>
+                </input>
+                <label className='input-label'>
+                </label>
+                </div>
+                <button type='submit' className='submit-button'>Prideti skelbima</button>
             </form>
         </div>
     )
 }
-
 export default Form;
+/**
+<label className='input-label'>Subtitle</label>
+                <input type='text' ref={subtitle} required={true}></input>
+                
+                <label className='input-label' >Price</label>
+                <input type='text' ref={price} required={true} name='text'></input>
+                <label className='input-label'>Image Url</label>
+                <input type='text' ref={imgUrl} required={true} name='imageUrl'></input>
+ */

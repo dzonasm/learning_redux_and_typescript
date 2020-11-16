@@ -12,13 +12,12 @@ const SearchBar = () => {
 
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setSearchField(e.target.value)
-        console.log(searchField)
-        
+        setSearchField(e.target.value)        
     }
 
     useEffect(() =>{
-        dispatch({type: FILTER, payload: searchField})
+        {dispatch({type: FILTER, payload: searchField})
+    }   
     },[searchField, dispatch])
 
     return(

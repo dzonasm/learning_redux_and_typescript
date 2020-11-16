@@ -6,7 +6,8 @@ export interface shopItem{
     title: string, 
     subtitle: string, 
     price:number, 
-    imgUrl: string
+    imgUrl: string,
+    quantity: number
     } 
 
 
@@ -24,10 +25,11 @@ export const TOGGLE_CART_WIDGET_VISIBLE = 'TOGGLE_CART_WIDGET_VISIBLE'
 
 
 // action type in shopping cart
-export type shoppingCartAction = {type : typeof NEW_ITEM_ADDED | typeof ITEM_REMOVED, payload: any}
+export type shoppingCartAction = {type : typeof NEW_ITEM_ADDED | typeof ITEM_REMOVED, payload: shopItem}
 
 //action type for the adds reducer
 export type addsReducerAction = {type : typeof ADD_NEW_ITEM | typeof FILTER, payload: any}
+
 
 //action type for widget reducer
 export type widgetReducerAction = { type: typeof TOGGLE_CART_WIDGET_VISIBLE, payload: boolean}

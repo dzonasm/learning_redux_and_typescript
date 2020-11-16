@@ -1,12 +1,12 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {ITEM_REMOVED} from '../../redux/types/types'
+import {ITEM_REMOVED, shopItem} from '../../redux/types/types'
 
 import './remove-button-styles.css'
 
 
 interface Props {
-    item : string | undefined
+    item : shopItem
     buttonText: string
 }
 

@@ -1,4 +1,5 @@
 import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED, ITEM_REMOVED} from '../types/types'
+import {addItemToCart} from '../../utilities/adding-to-cart-utils'
 
 export interface emptyCart {
     items: []
@@ -15,12 +16,12 @@ const shoppingCartReducer = (
     switch(action.type){
         case NEW_ITEM_ADDED:
             return{
-                ...state, items: [...state!.items, action.payload]
+                ...state, items: addItemToCart(state.items, action.payload)
             }
         case ITEM_REMOVED:
             return{
                 ...state, items: state.items.filter(item =>{
-                    return(item.id !== action.payload)
+                    return(item !== action.payload)
                 })
             }
 

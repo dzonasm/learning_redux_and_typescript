@@ -20,13 +20,14 @@ function CartWidget() {
                     return(
                         <div key={uuuidv4()} className='cart-item-and-button'>
                             <WidgetItem
-                            id={item.id}
+                                id={item.id}
                                 title={item.title} 
                                 subtitle={item.subtitle} 
                                 imgUrl={item.imgUrl} 
                                 price={item.price}
+                                quantity={item.quantity}
                             />
-                            <RemoveFromCartButton buttonText='remove item' item={item.id}/> 
+                            <RemoveFromCartButton buttonText='remove item' item={item}/> 
                         </div>
                     )}) : <h3 className='cart-empty-text'>Cart is empty</h3>
             }

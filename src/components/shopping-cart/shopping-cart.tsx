@@ -18,16 +18,17 @@ function ShoppingCart() {
                     return(
                         <div key={uuidv4()}>
                             <MenuItem
-                                id={uuidv4()}
+                                id={item.id}
                                 title={item.title} 
                                 subtitle={item.subtitle} 
                                 imgUrl={item.imgUrl} 
                                 price={item.price}
+                                quantity={item.quantity}
                             />
-                            <RemoveFromCartButton buttonText='remove from cart' item={item.id}/> 
+                            <RemoveFromCartButton buttonText='remove from cart' item={item}/> 
                         </div>
                     )
-                }) : <p>no items</p>
+                }) : <p>Krepselis tuscias</p>
             }
         </div>
         )

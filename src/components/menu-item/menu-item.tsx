@@ -3,7 +3,7 @@ import './menu-item.styles.css'
 import {shopItem} from '../../redux/types/types'
 
 
-const MenuItem = ({title, imgUrl, subtitle, price, id}: shopItem)=> {
+const MenuItem = ({title, imgUrl, subtitle, price, quantity}: shopItem)=> {
     return(
         <div className="add-container">
             <div 
@@ -14,7 +14,12 @@ const MenuItem = ({title, imgUrl, subtitle, price, id}: shopItem)=> {
             <div className="text">
     <h3 className='title'>{title}</h3>
     <p className='subtitle'>{subtitle}</p>
-    <p className='price'>{price} $</p>
+    <p className='price'>Vnt kaina: {price} $</p>
+        {quantity > 0 ? <div>
+            <p>Kiekis: {quantity}</p>
+        <p>Bendra kaina: {quantity * price} $</p>
+            </div>
+             : null}
             </div>
 
         </div>

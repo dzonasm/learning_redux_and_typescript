@@ -13,3 +13,9 @@
 .cart-item-price {
   font-size: smaller;
 }
+
+.widget-img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+}
