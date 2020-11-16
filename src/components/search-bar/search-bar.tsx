@@ -16,8 +16,8 @@ const SearchBar = () => {
     }
 
     useEffect(() =>{
-        {dispatch({type: FILTER, payload: searchField})
-    }   
+        dispatch({type: FILTER, payload: searchField})
+    
     },[searchField, dispatch])
 
     return(

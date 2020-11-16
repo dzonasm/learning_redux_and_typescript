@@ -18,7 +18,7 @@ const addsReducer = (
 
         case FILTER:
             return{
-                ...state, items: state.items.filter(item => (
+                ...state, items: itemsList.filter(item => (
                         item.title.toLowerCase().includes(action.payload.toLowerCase()) || 
                         item.subtitle.toLowerCase().includes(action.payload.toLowerCase())))
             }
