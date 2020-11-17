@@ -4,15 +4,15 @@ import {RootState} from '../../redux/root-reducer/root-reducer'
 import MenuItem from '../menu-item/menu-item'
 import RemoveFromCartButton from '../remove-from-cart-button/remove-from-cart-button'
 import {v4 as uuidv4} from 'uuid'
+import './shopping-cart.styles.css'
 
 function ShoppingCart() {
 
     const selectCartState = (state : RootState) => state.shoppingCart.items
     const cartState = useSelector(selectCartState)
-    console.log(cartState)
     
     return(
-        <div>
+        <div className='shopping-cart-items-container'>
             {
                 cartState.length > 0? cartState.map((item) =>{
                     return(
@@ -25,10 +25,10 @@ function ShoppingCart() {
                                 price={item.price}
                                 quantity={item.quantity}
                             />
-                            <RemoveFromCartButton buttonText='remove from cart' item={item}/> 
+                            <RemoveFromCartButton buttonText='pašalinti' item={item}/> 
                         </div>
                     )
-                }) : <p>Krepselis tuscias</p>
+                }) : <h2 className='cart-empty-text'>Krepšelis tuščias</h2>
             }
         </div>
         )

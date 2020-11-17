@@ -25,14 +25,6 @@
   flex-direction: column;
 }
 
-.cart-empty-text {
-  font-family: "Poppins", sans-serif;
-  font-size: medium;
-  display: block;
-  text-align: center;
-  margin-top: 25px;
-}
-
 @media screen and (max-width: 768px) {
   .shopping-cart-widget {
     transform: translateX(-100%);

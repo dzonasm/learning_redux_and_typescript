@@ -18,7 +18,7 @@ export default function MenuList({items} : shopItemArray) {
             quantity={item.quantity}
             /> 
             <div className='add-button-container'>
-            <AddToCartButton buttonText='add to cart' item={item}/> 
+            <AddToCartButton buttonText='Į krepšelį' item={item}/> 
             </div>
         </div>
     ))

@@ -2,9 +2,13 @@ import React  from 'react'
 
 import './search-bar.styles.css'
 
+//handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 
-const SearchBar = ({handleChange}: any) => {
+interface Props {
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
 
+const SearchBar = ({handleChange}: Props) => {
     return(
         <div className='search-bar-container'>
             <label>Paieška</label>

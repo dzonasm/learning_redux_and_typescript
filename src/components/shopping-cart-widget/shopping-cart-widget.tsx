@@ -27,7 +27,7 @@ function CartWidget() {
                                 price={item.price}
                                 quantity={item.quantity}
                             />
-                            <RemoveFromCartButton buttonText='remove item' item={item}/> 
+                            <RemoveFromCartButton buttonText='pašalinti' item={item}/> 
                         </div>
                     )}) : <h3 className='cart-empty-text'>Krepšelis tuščias</h3>
             }

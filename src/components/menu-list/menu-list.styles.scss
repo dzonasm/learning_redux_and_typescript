@@ -18,3 +18,9 @@
   height: 250px;
   margin: 20px 0px;
 }
+
+@media screen and (max-width: 768px) {
+  .menu-list-container {
+    justify-content: space-around;
+  }
+}
