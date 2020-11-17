@@ -1,0 +1,20 @@
+.menu-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.add-button-container {
+  position: relative;
+  bottom: 15px;
+  left: 55px;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 250px;
+  margin: 20px 20px;
+}

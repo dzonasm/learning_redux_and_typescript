@@ -2,10 +2,9 @@ import React from 'react'
 import MenuItem from '../menu-item/menu-item'
 import { useSelector} from 'react-redux'
 import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
-import SearchBar from '../search-bar/search-bar'
 import {RootState} from '../../redux/root-reducer/root-reducer'
 
-import './menu-list.styles.css'
+import './menu-list.styles.scss'
 
 export default function MenuList() {
 
@@ -13,7 +12,7 @@ export default function MenuList() {
     const items = useSelector(selectItems)
     
     const content = items.items.map(item => (
-        <div key={item.id}>
+        <div className='item-container' key={item.id}>
             <MenuItem 
             id={item.id}
             title={item.title} 
@@ -30,11 +29,7 @@ export default function MenuList() {
 
     return (
         <div className='menu-list-container'>
-            <h1 className='skelbimai-header'>Skelbimai</h1>
-            <div className='search-bar-container'>
-            <SearchBar/>
-            </div>
-    <div>{content}</div>
+        {content}
         </div>
     )
 }

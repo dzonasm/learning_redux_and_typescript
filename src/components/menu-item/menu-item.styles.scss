@@ -9,6 +9,10 @@
   margin-top: 25px;
 }
 
+.img:hover {
+  opacity: 0.85;
+}
+
 .text {
   grid-area: text;
   align-items: left;
@@ -22,11 +26,10 @@
 }
 
 .add-container {
-  width: 100%;
+  width: 400px;
   display: grid;
   height: 250px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas: "img text text text";
-  margin-bottom: 20px;
   border-top: 1px solid rgba(100, 100, 100, 0.4);
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './menu-item.styles.css'
+import './menu-item.styles.scss'
 import {shopItem} from '../../redux/types/types'
 
 

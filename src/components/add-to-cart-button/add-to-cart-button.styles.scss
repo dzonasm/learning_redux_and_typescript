@@ -6,6 +6,10 @@
   cursor: pointer;
   padding: 5px;
   border-radius: 4px;
+
+  &.wide {
+    width: 100px;
+  }
 }
 
 .add-to-cart-button:hover {

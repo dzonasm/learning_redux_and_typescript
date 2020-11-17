@@ -2,7 +2,7 @@ import React from 'react'
 import {useDispatch} from 'react-redux'
 import {shopItem, NEW_ITEM_ADDED} from '../../redux/types/types'
 
-import './add-to-cart-button.styles.css'
+import './add-to-cart-button.styles.scss'
 
 interface Props {
     item : shopItem

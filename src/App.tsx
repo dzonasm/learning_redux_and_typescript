@@ -3,10 +3,10 @@ import './App.css';
 
 import {Switch , Route} from 'react-router-dom'
 
-import MenuList from './components/menu-list/menu-list'
 import Header from './components/header/header'
 import NewAddPage from './components/new-add/new-add-page'
 import ShoppingCartPage from './pages/shopping-cart-page'
+import ItemsPage from './pages/items-page/items-page'
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header/>
       <Switch>
-      <Route exact path='/' component={MenuList}/>
+      <Route exact path='/' component={ItemsPage}/>
       <Route path='/ikelti' component={NewAddPage}/>
       <Route path='/cart' component={ShoppingCartPage}/>
       </Switch>
