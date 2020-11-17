@@ -2,13 +2,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .add-button-container {
   position: relative;
   bottom: 15px;
-  left: 55px;
+  left: 20px;
 }
 
 .item-container {
@@ -16,5 +16,5 @@
   flex-direction: column;
   width: 400px;
   height: 250px;
-  margin: 20px 20px;
+  margin: 20px 0px;
 }

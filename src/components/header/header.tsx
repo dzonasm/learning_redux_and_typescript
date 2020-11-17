@@ -22,10 +22,10 @@ const Header= () => {
                 <p className='header-link'>Skelbimai</p>
                 </Link>
                 <Link to='/ikelti'>
-                <p className='header-link'>Ikelti</p>
+                <p className='header-link'>Įkelti</p>
                 </Link>
                 <Link to='/cart'>
-                <p className='header-link'>Krepselis</p>
+                <p className='header-link'>Krepšelis</p>
                 </Link>
                 <WidgetButton/>
             </div>

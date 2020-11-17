@@ -1,17 +1,13 @@
 import React from 'react'
 import MenuItem from '../menu-item/menu-item'
-import { useSelector} from 'react-redux'
 import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
-import {RootState} from '../../redux/root-reducer/root-reducer'
-
+import {shopItemArray} from '../../redux/types/types'
 import './menu-list.styles.scss'
 
-export default function MenuList() {
+export default function MenuList({items} : shopItemArray) {
 
-    const selectItems = (state: RootState) =>state.items
-    const items = useSelector(selectItems)
     
-    const content = items.items.map(item => (
+    const content = items.map(item => (
         <div className='item-container' key={item.id}>
             <MenuItem 
             id={item.id}

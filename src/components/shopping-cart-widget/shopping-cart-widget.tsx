@@ -29,7 +29,7 @@ function CartWidget() {
                             />
                             <RemoveFromCartButton buttonText='remove item' item={item}/> 
                         </div>
-                    )}) : <h3 className='cart-empty-text'>Cart is empty</h3>
+                    )}) : <h3 className='cart-empty-text'>Krepšelis tuščias</h3>
             }
             </div>
         </div>

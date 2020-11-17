@@ -1,9 +1,25 @@
-.search-bar-container {
-  margin-bottom: 40px;
-}
-
 .search-bar {
   border-left: none;
   border-top: none;
   border-right: none;
+  background: rgba(161, 161, 161, 0.4);
+  padding: 5px;
+  border-radius: 10px;
+}
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 40px;
+  height: 80px;
+  justify-content: space-around;
+  width: 240px;
+  font-family: "Poppins", sans-serif;
+}
+
+.search-bar:focus,
+input:focus {
+  outline: none;
+  background: rgba(161, 161, 161, 0.6);
 }

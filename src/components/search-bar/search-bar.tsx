@@ -1,29 +1,14 @@
-import React, {ChangeEvent, useState, useEffect} from 'react'
-import {useDispatch} from 'react-redux'
-import {FILTER} from '../../redux/types/types'
+import React  from 'react'
 
 import './search-bar.styles.css'
 
 
-const SearchBar = () => {
-
-    const [searchField, setSearchField] = useState('')
-    const dispatch = useDispatch()
-
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setSearchField(e.target.value)        
-    }
-
-    useEffect(() =>{
-        dispatch({type: FILTER, payload: searchField})
-    
-    },[searchField, dispatch])
+const SearchBar = ({handleChange}: any) => {
 
     return(
         <div className='search-bar-container'>
-            <input type="text"  onChange={handleChange} value={searchField} className='search-bar'
-            placeholder="ieskoti garaze"
+            <label>Paieška</label>
+            <input type="text"  onChange={handleChange} className='search-bar'
             />
 
         </div>
