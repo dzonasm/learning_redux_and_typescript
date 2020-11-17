@@ -1,7 +1,8 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
 import {shopItem, NEW_ITEM_ADDED} from '../../redux/types/types'
-
+import CustomButton from '../custom-button/custom-button.component'
+ 
 import './add-to-cart-button.styles.scss'
 
 interface Props {
@@ -19,7 +20,7 @@ const AddToCartButton: React.FC<Props> = ({item, buttonText})=>{
     }
 
     return(
-    <button className='add-to-cart-button' onClick={handleClick}>{buttonText.toUpperCase()}</button>
+    <CustomButton buttonText={buttonText} handleClick={handleClick}></CustomButton>
     )
 }
 

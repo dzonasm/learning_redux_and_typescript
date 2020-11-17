@@ -6,7 +6,7 @@ import './new-add-styles.css'
 const NewAddPage = ()=>{
     return(
     <div>
-        <h2 className='prideti-header'>Prideti skelbima</h2>
+        <h2 className='prideti-header'>Pridėti skelbima</h2>
         <Form/>
     </div>
     )

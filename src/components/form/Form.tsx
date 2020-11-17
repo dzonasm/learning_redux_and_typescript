@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import {useDispatch } from 'react-redux'
 import {ADD_NEW_ITEM} from '../../redux/types/types'
+import CustomButton from '../custom-button/custom-button.component'
 
 import './form.styles.css'
 
@@ -36,7 +37,7 @@ const Form: React.FC = () => {
                 <label className='input-label'>
                 </label>
                 </div>
-                <label className='label'>Aprasymas</label>
+                <label className='label'>Aprašymas</label>
                 <div className='form-input'>
                 <input type='text' ref={subtitle} required={true}>
                 </input>
@@ -58,18 +59,9 @@ const Form: React.FC = () => {
                 <label className='input-label'>
                 </label>
                 </div>
-                <button type='submit' className='submit-button'>Prideti skelbima</button>
+                <CustomButton wide type='submit' buttonText='Pridėti skelbima'></CustomButton>
             </form>
         </div>
     )
 }
 export default Form;
-/**
-<label className='input-label'>Subtitle</label>
-                <input type='text' ref={subtitle} required={true}></input>
-                
-                <label className='input-label' >Price</label>
-                <input type='text' ref={price} required={true} name='text'></input>
-                <label className='input-label'>Image Url</label>
-                <input type='text' ref={imgUrl} required={true} name='imageUrl'></input>
- */

@@ -23,6 +23,8 @@
 .cart-item-and-button {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 15px auto;
 }
 
 @media screen and (max-width: 768px) {

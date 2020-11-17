@@ -15,15 +15,16 @@ function ShoppingCart() {
         <div className='shopping-cart-items-container'>
             {
                 cartState.length > 0? cartState.map((item) =>{
+                    const {id, title, subtitle, imgUrl, price, quantity} = item
                     return(
                         <div key={uuidv4()}>
                             <MenuItem
-                                id={item.id}
-                                title={item.title} 
-                                subtitle={item.subtitle} 
-                                imgUrl={item.imgUrl} 
-                                price={item.price}
-                                quantity={item.quantity}
+                                id={id}
+                                title={title} 
+                                subtitle={subtitle} 
+                                imgUrl={imgUrl} 
+                                price={price}
+                                quantity={quantity}
                             />
                             <RemoveFromCartButton buttonText='pašalinti' item={item}/> 
                         </div>
