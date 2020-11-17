@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .add-button-container {
@@ -14,9 +15,6 @@
 .item-container {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 250px;
-  margin: 20px 0px;
 }
 
 @media screen and (max-width: 768px) {

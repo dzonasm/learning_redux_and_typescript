@@ -1,5 +1,5 @@
 .shopping-cart-widget {
-  height: 340px;
+  height: 325px;
   width: 180px;
   background-color: white;
   position: absolute;
@@ -13,11 +13,7 @@
   height: 320px;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
-}
-
-.shopping-cart-widget ::-webkit-scrollbar {
-  display: none;
+  overflow: auto;
 }
 
 .cart-item-and-button {

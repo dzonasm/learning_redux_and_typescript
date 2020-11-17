@@ -5,7 +5,7 @@ import RemoveFromCartButton from '../remove-from-cart-button/remove-from-cart-bu
 import WidgetItem from './widget-items/widget-items'
 import {v4 as uuuidv4} from 'uuid'
 
-import './shopping-cart-widget.styles.css'
+import './shopping-cart-widget.styles.scss'
 
 function CartWidget() {
 

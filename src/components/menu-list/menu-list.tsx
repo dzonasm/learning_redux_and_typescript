@@ -1,27 +1,26 @@
 import React from 'react'
 import MenuItem from '../menu-item/menu-item'
-import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
 import {shopItemArray} from '../../redux/types/types'
 import './menu-list.styles.scss'
 
 export default function MenuList({items} : shopItemArray) {
 
     
-    const content = items.map(item => (
-        <div className='item-container' key={item.id}>
-            <MenuItem 
-            id={item.id}
-            title={item.title} 
-            subtitle={item.subtitle} 
-            imgUrl={item.imgUrl} 
-            price={item.price}
-            quantity={item.quantity}
+    const content = items.map(item => {
+        const{id, title, subtitle, imgUrl, price, quantity} = item
+
+        return(
+            <MenuItem
+            key={id}
+            item={item}
+            id={id}
+            title={title} 
+            subtitle={subtitle} 
+            imgUrl={imgUrl} 
+            price={price}
+            quantity={quantity}
             /> 
-            <div className='add-button-container'>
-            <AddToCartButton buttonText='Į krepšelį' item={item}/> 
-            </div>
-        </div>
-    ))
+    )})
 
     return (
         <div className='menu-list-container'>

@@ -10,6 +10,16 @@ export interface shopItem{
     quantity: number
     } 
 
+export interface menuItem{
+    item: shopItem,
+    id:string,
+    title: string, 
+    subtitle: string, 
+    price:number, 
+    imgUrl: string,
+    quantity: number
+}
+
 
 //newItemType
 export interface shopItemArray{

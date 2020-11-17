@@ -1,11 +1,12 @@
 import React from 'react'
 import './menu-item.styles.scss'
-import {shopItem} from '../../redux/types/types'
+import {menuItem} from '../../redux/types/types'
+import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
 
 
-const MenuItem = ({title, imgUrl, subtitle, price, quantity}: shopItem)=> {
+const MenuItem = ({title, imgUrl, subtitle, price, quantity, item}: menuItem)=> {
     return(
-        <div className="add-container">
+        <div className="menu-item-container">
             <div 
             className='img' 
             style={{
@@ -17,11 +18,11 @@ const MenuItem = ({title, imgUrl, subtitle, price, quantity}: shopItem)=> {
     <p className='price'>Vnt kaina: {price} $</p>
         {quantity > 0 ? <div>
             <p>Kiekis: {quantity}</p>
-        <p>Bendra kaina: {quantity * price} $</p>
+        <p className="full-price">Bendra kaina: {quantity * price} $</p>
             </div>
              : null}
+            <AddToCartButton buttonText='Į krepšelį' item={item}/>
             </div>
-
         </div>
     )
 }

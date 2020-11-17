@@ -1,12 +1,11 @@
 .img {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   background-size: cover;
   border-radius: 10px;
   overflow: hidden;
-  grid-area: img;
-  margin: auto auto auto 0;
-  margin-top: 25px;
+  margin: 0 auto;
+  border: 1px solid rgba(230, 230, 230, 0.8);
 }
 
 .img:hover {
@@ -14,22 +13,37 @@
 }
 
 .text {
-  grid-area: text;
-  align-items: left;
+  align-items: center;
   margin-top: 25px;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   font-family: "Poppins", sans-serif;
-  margin-left: 30px;
 }
 
-.add-container {
-  width: 400px;
-  display: grid;
-  height: 250px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "img text text text";
-  border-top: 1px solid rgba(100, 100, 100, 0.4);
+.menu-item-container {
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 25px;
+  padding: 15px;
+  background-color: rgba(230, 230, 230, 0.4);
+
+  .subtitle {
+    margin: 10px 0px;
+    font-size: small;
+    height: 50px;
+  }
+
+  .price {
+    margin-bottom: 15px;
+  }
+
+  .full-price {
+    margin-bottom: 25px;
+  }
 }

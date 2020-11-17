@@ -188,6 +188,16 @@ quantity: 0
     imgUrl:'https://www.tristar.eu/product/image/medium/ac-5426_0.jpg',
 quantity: 0
 
-}]
+},
+{
+    id: uuidv4(),
+    title:'Degtukai',
+    subtitle:'Maximoje pirkti degtukai',
+    price:1,
+    imgUrl:'https://thumbs.nosto.com/quick/pk9zk5wa/8/46479/bccc5731db9c441063a5e8a2ef25eb695ffa9df7d4dcd45627ed379048ed8c99a/A',
+quantity: 0
+
+}
+]
 
 export default itemsList;

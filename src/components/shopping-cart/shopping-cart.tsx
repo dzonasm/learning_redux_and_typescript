@@ -1,8 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import {RootState} from '../../redux/root-reducer/root-reducer'
-import MenuItem from '../menu-item/menu-item'
-import RemoveFromCartButton from '../remove-from-cart-button/remove-from-cart-button'
+import CartItem from '../cart-item/cart-item.component'
 import {v4 as uuidv4} from 'uuid'
 import './shopping-cart.styles.css'
 
@@ -18,7 +17,8 @@ function ShoppingCart() {
                     const {id, title, subtitle, imgUrl, price, quantity} = item
                     return(
                         <div key={uuidv4()}>
-                            <MenuItem
+                            <CartItem
+                                item={item}
                                 id={id}
                                 title={title} 
                                 subtitle={subtitle} 
@@ -26,7 +26,6 @@ function ShoppingCart() {
                                 price={price}
                                 quantity={quantity}
                             />
-                            <RemoveFromCartButton buttonText='pašalinti' item={item}/> 
                         </div>
                     )
                 }) : <h2 className='cart-empty-text'>Krepšelis tuščias</h2>
