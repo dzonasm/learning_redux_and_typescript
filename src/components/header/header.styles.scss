@@ -19,6 +19,8 @@
 
 .header-link {
   color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: smaller;
 }
 
 .widget-and-cart-components {
@@ -33,6 +35,10 @@
   justify-content: space-around;
   text-align: center;
   margin: auto 0 auto auto;
+
+  a {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 768px) {

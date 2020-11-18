@@ -7,13 +7,13 @@ import AddToCartButton from '../add-to-cart-button/add-to-cart-button'
 const MenuItem = ({title, imgUrl, subtitle, price, quantity, item}: menuItem)=> {
     return(
         <div className="menu-item-container">
+            <h3 className='title'>{title}</h3>
             <div 
             className='img' 
             style={{
                 backgroundImage: `url(${imgUrl})`
             }}/>
             <div className="text">
-    <h3 className='title'>{title}</h3>
     <p className='subtitle'>{subtitle}</p>
     <p className='price'>Vnt kaina: {price} $</p>
         {quantity > 0 ? <div>
