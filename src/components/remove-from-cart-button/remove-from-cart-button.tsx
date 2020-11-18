@@ -1,17 +1,12 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
-import {ITEM_REMOVED, shopItem} from '../../redux/types/types'
+import {ITEM_REMOVED, removeFromCartButttonProps} from '../../redux/types/types'
 import CustomButton from '../custom-button/custom-button.component'
 
 import './remove-button-styles.css'
 
 
-interface Props {
-    item : shopItem
-    buttonText: string
-}
-
-const RemoveFromCartButton: React.FC<Props> = ({item, buttonText})=>{
+const RemoveFromCartButton: React.FC<removeFromCartButttonProps> = ({item, buttonText})=>{
     const dispatch = useDispatch()
 
     

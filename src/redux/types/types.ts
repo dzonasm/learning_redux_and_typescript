@@ -21,6 +21,36 @@ export interface menuItem{
 }
 
 
+//add to cart button props
+export interface addToCartButtonProps {
+    item : shopItem
+    buttonText: string
+}
+
+//remove from cart button props
+
+export interface removeFromCartButttonProps {
+    item : shopItem
+    buttonText: string
+}
+
+//search bar props
+
+export interface searchBarProps {
+    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+//custom button props
+
+export interface customButtonProps {
+    buttonText : string,
+    wide?: true | undefined,
+    remove?: true | undefined,
+    handleClick?: () => void,
+    type? : "button" | "submit" | "reset" | undefined
+}
+
+
 //newItemType
 export interface shopItemArray{
     items: shopItem[]

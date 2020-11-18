@@ -1,14 +1,9 @@
 import React  from 'react'
-
+import {searchBarProps} from '../../redux/types/types'
 import './search-bar.styles.css'
 
-//handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 
-interface Props {
-    handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-
-const SearchBar = ({handleChange}: Props) => {
+const SearchBar = ({handleChange}: searchBarProps) => {
     return(
         <div className='search-bar-container'>
             <label>Paieška</label>

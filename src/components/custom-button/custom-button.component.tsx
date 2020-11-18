@@ -1,16 +1,9 @@
 import React from 'react'
 import './custom-button.styles.scss'
-
-interface Props {
-    buttonText : string,
-    wide?: true | undefined,
-    remove?: true | undefined,
-    handleClick?: () => void,
-    type? : "button" | "submit" | "reset" | undefined
-}
+import {customButtonProps} from '../../redux/types/types'
 
 
-const CustomButton = ({buttonText, handleClick, wide, remove, type}: Props) =>(
+const CustomButton = ({buttonText, handleClick, wide, remove, type}: customButtonProps) =>(
         <button 
             type={type}
             onClick={handleClick} 
