@@ -1,5 +1,3 @@
-
-
 //menu item props for components, that dont require the id to be passed
 export interface shopItem{
     id:string,
@@ -18,6 +16,11 @@ export interface menuItem{
     price:number, 
     imgUrl: string,
     quantity: number
+}
+
+//sorting reducer state type
+export interface sortingReducerState {
+    sort: string
 }
 
 
@@ -61,7 +64,11 @@ export const NEW_ITEM_ADDED = 'NEW_ITEM_ADDED'
 export const ADD_NEW_ITEM = 'ADD_NEW_ITEM'
 export const ITEM_REMOVED = 'ITEM_REMOVED'
 export const TOGGLE_CART_WIDGET_VISIBLE = 'TOGGLE_CART_WIDGET_VISIBLE'
+export const SORT_BY_PRICE = 'SORT_BY_PRICE'
 
+//action type for sorting reducer
+
+export type sortingReducerAction = {type : typeof SORT_BY_PRICE, payload: string}
 
 // action type in shopping cart
 export type shoppingCartAction = {type : typeof NEW_ITEM_ADDED | typeof ITEM_REMOVED, payload: shopItem}
