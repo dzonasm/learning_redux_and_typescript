@@ -9,11 +9,16 @@ function ShoppingCart() {
 
     const selectCartState = (state : RootState) => state.shoppingCart.items
     const cartState = useSelector(selectCartState)
+
+    const filteredItems = cartState.filter(item =>{
+        return(
+        item.quantity > 0
+    )})
     
     return(
         <div className='shopping-cart-items-container'>
             {
-                cartState.length > 0? cartState.map((item) =>{
+                cartState.length > 0? filteredItems.map((item) =>{
                     const {id, title, subtitle, imgUrl, price, quantity} = item
                     return(
                         <div key={uuidv4()}>

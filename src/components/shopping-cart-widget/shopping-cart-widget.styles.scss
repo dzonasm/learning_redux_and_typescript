@@ -1,5 +1,5 @@
 .shopping-cart-widget {
-  height: 325px;
+  height: 330px;
   width: 180px;
   background-color: white;
   position: absolute;
@@ -7,10 +7,16 @@
   left: 100%;
   transform: translateX(-75%);
   border: 0.5px solid rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .cart-items {
-  height: 320px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -21,6 +27,12 @@
   flex-direction: column;
   justify-content: center;
   margin: 15px auto;
+}
+
+.cart-button-container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

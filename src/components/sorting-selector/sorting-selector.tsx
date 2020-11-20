@@ -1,6 +1,7 @@
 import React from 'react'
 import {InputLabel, Select, MenuItem} from '@material-ui/core'
 import {useDispatch} from 'react-redux'
+import './sorting-selector.styles.scss'
 import{SORT_BY_PRICE} from '../../redux/types/types'
 
 export const SortingSelector = () =>{

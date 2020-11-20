@@ -1,5 +1,5 @@
-import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED, ITEM_REMOVED} from '../types/types'
-import {addItemToCart} from '../../utilities/adding-to-cart-utils'
+import {shopItemArray, shoppingCartAction, NEW_ITEM_ADDED, ITEM_REMOVED, SINGLE_ITEM_REMOVED} from '../types/types'
+import {addItemToCart, removeSingleItemFromCart} from '../../utilities/adding-to-cart-utils'
 
 export interface emptyCart {
     items: []
@@ -24,6 +24,11 @@ const shoppingCartReducer = (
                     return(item !== action.payload)
                 })
             }
+        case SINGLE_ITEM_REMOVED:{
+            return{
+                ...state, items: removeSingleItemFromCart(state.items, action.payload)
+            }
+        }
 
         default:
             return state

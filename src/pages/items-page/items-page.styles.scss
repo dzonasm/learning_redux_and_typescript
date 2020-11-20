@@ -4,3 +4,9 @@
   margin: 80px auto;
   text-align: center;
 }
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

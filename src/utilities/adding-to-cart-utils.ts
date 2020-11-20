@@ -18,3 +18,20 @@ export const addItemToCart = (cartItemsArray: shopItem[], cartItemToAdd: shopIte
     return [...cartItemsArray, {...cartItemToAdd, quantity: 1}]
 }
 
+export const removeSingleItemFromCart = (cartItemsArray: shopItem[], cartItemToRemove: shopItem) =>{
+    const existingCartItem = cartItemsArray.find((cartItem: shopItem) => cartItem.id === cartItemToRemove.id)
+    console.log(' the existing item' + existingCartItem)
+
+
+    if (existingCartItem && existingCartItem.quantity > 0){
+        return cartItemsArray.map((cartItem: shopItem) =>
+            cartItem.id === cartItemToRemove.id 
+            ? {...cartItem, quantity: cartItem.quantity - 1}
+            : cartItem)
+    }
+
+
+    return [...cartItemsArray, {...cartItemToRemove, quantity: -1}]
+}
+
+

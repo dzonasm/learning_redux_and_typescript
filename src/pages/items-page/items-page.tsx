@@ -14,7 +14,6 @@ const ItemsPage = () => {
     const [searchField, setSearchField] = useState('')
     const selectItems = (state: RootState) => state.items.items
     const items = useSelector(selectItems)
-
     const selectSorting = (state: RootState) => state.sort.sort
     const sort = useSelector(selectSorting)
 
@@ -26,28 +25,26 @@ const ItemsPage = () => {
         item.title.toLowerCase().includes(searchField.toLowerCase()) || 
         item.subtitle.toLowerCase().includes(searchField.toLowerCase())))
 
-    
-
     if (sort==='asc'){
         filteredItems.sort((a,b) => a.price - b.price)
     }
-    
     if(sort==="dsc"){
         filteredItems.sort((a,b) => b.price-a.price )
     }
-
     if(sort==="no-sort"){
         filteredItems.sort()
     }
 
-
-
     return (
         <div>
             <h2 className='skelbimai-header'>Skelbimai</h2>
-            <SortingSelector/>
+            <div className='search-container'>
             <SearchBar handleChange={handleChange} />
+            <SortingSelector/>
+
+            </div>
             <MenuList items={filteredItems} />
+
         </div>
     )
 }
